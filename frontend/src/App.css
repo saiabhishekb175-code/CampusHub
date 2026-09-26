@@ -1,0 +1,529 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f4fb;
+  color: #171525;
+}
+
+button {
+  font-family: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left {
+  width: 52%;
+  min-height: 100vh;
+  padding: 45px 65px;
+  color: white;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(139, 92, 246, 0.35),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(99, 102, 241, 0.3),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #17142b, #6248d8);
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.hero {
+  margin-top: 150px;
+  max-width: 560px;
+}
+
+.hero p {
+  color: #c5baff;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 62px;
+  line-height: 1.03;
+  margin: 20px 0;
+  color: white;
+  letter-spacing: -2px;
+}
+
+.hero span {
+  color: #d7d3f5;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #faf9fd;
+}
+
+.loginBox {
+  width: 390px;
+}
+
+.icon,
+.cardIcon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #654bd7, #8b5cf6);
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(101, 75, 215, 0.2);
+}
+
+.loginBox h2 {
+  margin: 0;
+  font-size: 30px;
+  color: #171525;
+}
+
+.loginBox p {
+  color: #888795;
+  font-size: 13px;
+  margin: 8px 0 30px;
+}
+
+.loginBox label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #33323f;
+  margin: 18px 0 7px;
+}
+
+.loginBox input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #dedde7;
+  border-radius: 9px;
+  padding: 0 14px;
+  outline: none;
+  background: white;
+  color: #171525;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.loginBox input::placeholder {
+  color: #aaa9b5;
+}
+
+.loginBox input:focus {
+  border-color: #654bd7;
+  box-shadow: 0 0 0 4px rgba(101, 75, 215, 0.08);
+}
+
+.loginBox button {
+  width: 100%;
+  height: 48px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #654bd7, #7c5ce5);
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.loginBox button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(101, 75, 215, 0.25);
+}
+
+.message {
+  margin-top: 15px;
+  padding: 12px;
+  background: #eeeaff;
+  color: #5941c5;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.loginBox small {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #aaa9b5;
+  font-size: 10px;
+}
+
+/* =========================
+   DASHBOARD
+   ========================= */
+
+.dashboard {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(124, 92, 229, 0.06),
+      transparent 25%
+    ),
+    #f5f4fb;
+}
+
+.topbar {
+  height: 72px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #e8e7ef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 55px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.topbar .logo {
+  color: #654bd7;
+}
+
+.userArea {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.userArea span {
+  color: #171525;
+  background: #f0edff;
+  padding: 9px 13px;
+  border-radius: 20px;
+}
+
+.userArea button {
+  border: none;
+  background: #eeeaff;
+  color: #654bd7;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.userArea button:hover {
+  background: #654bd7;
+  color: white;
+}
+
+.dashboardContent {
+  max-width: 1250px;
+  margin: auto;
+  padding: 55px;
+}
+
+.welcome {
+  position: relative;
+}
+
+.welcome p {
+  color: #654bd7;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.welcome h1 {
+  color: #171525;
+  font-size: 42px;
+  margin: 12px 0;
+  letter-spacing: -1px;
+}
+
+.welcome span {
+  color: #777582;
+  font-size: 14px;
+}
+
+/* =========================
+   DASHBOARD CARDS
+   ========================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 45px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #e8e7ef;
+  box-shadow: 0 8px 25px rgba(31, 24, 68, 0.04);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #d7d0ff;
+  box-shadow: 0 15px 35px rgba(55, 42, 120, 0.09);
+}
+
+.cardIcon {
+  margin-bottom: 20px;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+}
+
+.card h2 {
+  color: #171525;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.card p {
+  color: #777582;
+  font-size: 12px;
+  line-height: 1.7;
+  min-height: 60px;
+}
+
+.card button {
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #654bd7, #7c5ce5);
+  color: white;
+  padding: 10px 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.card button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(101, 75, 215, 0.2);
+}
+
+.card button:disabled {
+  cursor: default;
+}
+
+/* =========================
+   INFO BOX
+   ========================= */
+
+.infoBox {
+  margin-top: 30px;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(139, 92, 246, 0.4),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #17142b, #6248d8);
+  color: white;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(50, 37, 120, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.infoBox h2 {
+  color: white;
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.infoBox p {
+  color: #e0dcff;
+  margin: 0 0 7px;
+}
+
+.infoBox span {
+  color: #c5baff;
+  font-size: 12px;
+}
+
+/* =========================
+   CLUB / ACTIVITY VISUALS
+   ========================= */
+
+.clubBadge {
+  display: inline-block;
+  background: #eeeaff;
+  color: #654bd7;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+  background: #eeeaff;
+  color: #654bd7;
+}
+
+.activityDate {
+  background: #f1eeff;
+  color: #654bd7;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 11px;
+  margin: 12px 0;
+}
+
+.activityLocation {
+  color: #666473;
+  font-size: 11px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: #171525;
+}
+
+.statRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e8e7ef;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.statCard small {
+  color: #898794;
+  font-size: 10px;
+}
+
+.statCard strong {
+  display: block;
+  color: #654bd7;
+  font-size: 25px;
+  margin-top: 6px;
+}
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.backButton {
+  margin-bottom: 25px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #eeeaff;
+  color: #654bd7;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.backButton:hover {
+  background: #654bd7;
+  color: white;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1050px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboardContent {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .left {
+    display: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboardContent {
+    padding: 25px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .statRow {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .welcome h1 {
+    font-size: 32px;
+  }
+
+  .userArea {
+    gap: 8px;
+  }
+
+  .userArea span {
+    display: none;
+  }
+}
